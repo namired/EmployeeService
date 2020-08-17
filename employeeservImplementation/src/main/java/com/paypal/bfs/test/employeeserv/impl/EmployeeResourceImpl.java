@@ -46,7 +46,7 @@ public class EmployeeResourceImpl implements EmployeeResource {
         }
         com.paypal.bfs.test.employeeserv.entity.Employee emp
                 = employeeService.createEmployee(EmployeeModelMapper.convertEmployeeModelToEntity(employee));
-        return new ResponseEntity<>(EmployeeModelMapper.converEmployeeEntiryToModel(emp), HttpStatus.OK);
+        return new ResponseEntity<>(EmployeeModelMapper.converEmployeeEntiryToModel(emp), HttpStatus.CREATED);
     }
 
 

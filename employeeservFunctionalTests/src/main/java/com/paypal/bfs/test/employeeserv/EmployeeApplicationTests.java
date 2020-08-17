@@ -22,14 +22,10 @@ public class EmployeeApplicationTests {
 	EmployeeRepository repository;
 
 	@Test
-	public void contextLoads() {
-	}
-
-	@Test
-	public void testCreateAndRetriveEmployee() throws Exception {
+	public void testCreateEmployee() throws Exception {
 		Employee emp = new Employee();
-		emp.setId(100);
-		emp.setFirstName("Jason");
+		emp.setId(1);
+		emp.setFirstName("Sam");
 		emp.setLastName("Bear");
 		emp.setDateOfBirth(new Date());
 		Address address = new Address();
@@ -43,15 +39,16 @@ public class EmployeeApplicationTests {
 		//Create Test
 		Employee emp1 = repository.save(emp);
 		assertNotNull(emp1);
-		assertEquals("Jason", emp1.getFirstName());
+		assertEquals("Sam", emp1.getFirstName());
+	}
 
+	@Test
+	public void testRetriveEmployee() throws Exception {
 		//Retrieve test
 		Optional<Employee> emp2 = repository.findById(100);
 		assertTrue(emp2.isPresent());
 		assertNotNull(emp2.get());
-		assertEquals("Jason", emp2.get().getFirstName());
+		assertEquals("Json", emp2.get().getFirstName());
 	}
-
-
 
 }
