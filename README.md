@@ -33,3 +33,19 @@ We would like you to enhance the existing project and see you complete the follo
 - Error handling in case of failures.
 - Idempotency logic is implemented to avoid duplicate resource creation.
 
+Sample Request:
+{
+  "id": 201,
+  "first_name": "Json",
+  "last_name": "Bear",
+  "date_of_birth": "12/12/1983",
+  "address": {
+    "id": 200,
+    "line1": "15711 Clems creek ln",
+    "line2": "",
+    "city": "charlotte",
+    "state": "NC",
+    "country": "USA",
+    "zip": 28277
+  }
+}
